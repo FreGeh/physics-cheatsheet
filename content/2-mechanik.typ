@@ -1,2 +1,3 @@
-= Mechanik
-#lorem(200)
+= Kinematik
+
+Essentiell ist die Verkettung von Ort -> Geschwindigkeit -> Beschleunigung
