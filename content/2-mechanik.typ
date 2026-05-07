@@ -1,7 +1,7 @@
 #import "@preview/fletcher:0.5.8": diagram, edge
 
 = Kinematik
-= Kinematik
+_Wie sich ein Körper bewegt_
 
 #table(  
   columns: 3,
@@ -67,10 +67,9 @@ Winkelgeschwindigkeit $(d theta)/(d t)$
 Mittlere Winkelgeschwindigkeit
 
 Bahngeschwindigkeit
-#pagebreak()
 
 = Dynamik
-Ursache von Bewegungen
+_Ursache von Bewegungen = Wirkung von Kräften_
 
 #table(  
   columns: 3,
