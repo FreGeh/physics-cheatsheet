@@ -33,7 +33,8 @@
 //   [Druck],[$p = F / A$],[$P a=N/m^2$],
 //   [Dichte],[$rho = d m / d V$],[$(k g)/m^3$],
 // )
-
+// Tesla -Magnetfeld
+// elektrische ladung Q - Coulomb C = A * s
 == Messfehler
 === Systematisch
 Entsteht durch:
