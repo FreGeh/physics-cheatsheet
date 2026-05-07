@@ -13,28 +13,6 @@
   [Lichtstärke $I_v$], [Candela $c d$],
 )
 
-// == Abgeleitete Einheiten
-// #table(  
-//   columns: 3,  
-//   align: center + horizon,  
-//   table.header[Größe][Definition][Einheit],
-//   [Geschwindigkeit],[$harpoon(v) = (d harpoon(r))/(d t)$],[$m/s$],
-//   [Beschleunigung],[$harpoon(a)=(d harpoon(v))/(d t)$],[$m/s^2$],
-//   [Impuls],[$harpoon(p)=m dot harpoon(v)$],[$N dot s$],
-//   [Kraft],[$harpoon(F) = (d harpoon(p))/(d t)$],[$N$],
-//   [Kraft ($m$ konstant)],[$harpoon(F) = m dot harpoon(a)$],[$N$],
-//   [Kinetische Energie],[$E_(k) = 1/2 m|harpoon(v)|^2$],[$J$],
-//   [Potenzielle Energie],[$E_(p) = m g h$],[$J$],
-//   [Arbeit],[$W = F dot s$],[$J$],
-//   [Leistung],[$P(t) = (d W(t))/(d t)$],[$W=J/s$],
-//   [Frequenz],[$f= 1 / T$],[$H z$], 
-//   [Fläche],[$A$],[$m^2$],
-//   [Volumen],[$V$],[$m^3$],
-//   [Druck],[$p = F / A$],[$P a=N/m^2$],
-//   [Dichte],[$rho = d m / d V$],[$(k g)/m^3$],
-// )
-// Tesla -Magnetfeld
-// elektrische ladung Q - Coulomb C = A * s
 == Messfehler
 === Systematisch
 Entsteht durch:
