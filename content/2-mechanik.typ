@@ -51,7 +51,10 @@ _Wie sich ein Körper bewegt_
 
 == Superposition
 nur im nicht-relativistischen Grenzfall
-=== Geschwindigkeit
+
+=== Beispiel: Geschwindigkeit
+
+=== Beispiel: Wellen
 
 == Wurf
 
