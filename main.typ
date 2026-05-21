@@ -10,7 +10,7 @@
 #set heading(numbering: "1.")
 #show heading.where(level: 3): set heading(numbering: none)
 #show math.equation: set text(fill: rgb("#265499"))
-#show math.equation: set text(size: 17pt)
+#show math.equation: set text(size: 16pt)
 #set table(inset: (x, y) => if y == 0 { 4pt } else { 8pt })
 #show table.cell.where(y: 0): set text(weight: "bold")  
 #show table: set table(
