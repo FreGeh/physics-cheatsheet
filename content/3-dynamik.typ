@@ -6,7 +6,7 @@ _Ursache von Bewegungen = Wirkung von Kräften_
   align: center + horizon,  
   table.header[Größe][Definition][Einheit],
   [Impuls (_momentum_)],[$arrow(p)=m arrow(v)$],[$k g dot m / s$],
-  [Kraft (_force_)],[$F=m dot arrow(a)$ $arrow(F)=(d arrow(p))/(d t)$],[$N$],
+  [Kraft (_force_)],[$arrow(F)_"ges"=m dot arrow(a)$ $arrow(F)=(d arrow(p))/(d t)$],[$N$],
   [Arbeit (_work_)],[$W = integral_S arrow(F) dot d arrow(s)$],[$J$],
   [Energie],[$E_"kin", E_"pot"$],[$J$],
   [Leistung (_power_)],[$P=arrow(F) dot arrow(v)$
@@ -16,10 +16,17 @@ _Ursache von Bewegungen = Wirkung von Kräften_
 
 == Newtonsche Axiome
 === Trägheitsprinzip
+$ arrow(F)_"ges" = 0 => arrow(v) = "konstant" $
+
 === Aktionsprinzip
+$ arrow(F)_"ges" = m arrow(a) $
 
 === Reaktionsprinzip
-=== Äquivalenzprinzip
+$ arrow(F)_"A auf B" = - arrow(F)_"B auf A" $
+
+_Äquivalenzprinzip_:
+
+$ m_"träge" = m_"schwer" $
 
 == Impuls
 
@@ -28,11 +35,11 @@ _Ursache von Bewegungen = Wirkung von Kräften_
 
 
 == Arbeit & Energie
+Nur die Komponente der Kraft in Richtung der Verschiebung verrichtet Arbeit:
 $ W = integral_S arrow(F) dot d arrow(s) $
-Kraft in Bewegungsrichtung verrichtet Arbeit
 
-Für konstante Kraft:
-$W = F s cos(theta)$
+Für konstante Kraft mit $theta$ = Winkel zwischen Kraft und Verschiebung:
+$ W = F s cos(theta) $
 
 *Arbeit aller Kräfte zusammen* = Änderung kinetischer Energie
 $ W_"netto"=Delta E_"kin" $
@@ -43,7 +50,8 @@ $ E_"kin" = 1/2 m v^2 $
 #image("images/konservativ_arbeit.png")
 === Konservativ
 $ W_"konservativ"=-Delta E_"pot" $
-- Arbeit wird als $E_"pot"$ gespeichert und widergegeben
+- Arbeit gegen eine konservative Kraft erhöht $E_"pot"$
+- Arbeit der konservativen Kraft verringert $E_"pot"$
 - hängt nur von Start- und Endpunkt ab
 
 _z.B. Gravitation, elektr. Feld, Federkraft_
@@ -63,6 +71,7 @@ $ E_("pot,grav")=m g h $
 $ E_"pot,Feder" = 1/2 k x^2 $
 // $=> W_F = -1/2 k (x_2^2 - x_1^2), E_"pot" = 1/2 k x^2$
 
+wobei $x$ = Auslenkung aus der Ruhelage
 == Leistung
 Arbeit pro Zeiteinheit
 
@@ -107,6 +116,7 @@ $ arrow(v)_"gemeinsam" = arrow(p)_"ges,vor" / M_"ges" $
 === Beispiel: Raketengleichung
 #image("images/raketengleichung.png")
 $ Delta v = v_G ln(m_0/m(t)) $
+_idealisiert_ 
 
 === Beispiel: Gravitational Slingshot
 #image("images/slingshot.png")
