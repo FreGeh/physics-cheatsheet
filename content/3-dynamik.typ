@@ -66,49 +66,47 @@ $ E_"pot,Feder" = 1/2 k x^2 $
 == Leistung
 Arbeit pro Zeiteinheit
 
-Pferdestärke $P S=$
+$ P=(Delta W)/(Delta t)=(d W)/(d t) $
+
+*Pferdestärke* $P S=(75 k g dot g dot 1m)/1s=0.735 k W$
 #image("images/PS.png")
 
 == Erhaltungssätze
-
+In geschlossenen Systemen gelten:
 === Impulserhaltung
-$arrow(F)_"tot" = sum_i arrow(F)_i = 0 => arrow(p)= "konstant"$
+Wenn  $arrow(F)_"ext,ges"=0$:
+$ arrow(p)_"ges,vor" = sum_i arrow(p)_i_"vor" = sum_i arrow(p)_i_"nach" = arrow(p)_"ges,nach" $
 
 === Energieerhaltung
 $E_"gesamt" = sum_i E_i = "konstant"$
 
-== Stoß
-// $sum arrow(p)_"vor" = sum arrow(p)_"nach"$
+*konservativ*: $E_"mech,vor" = E_"mech,nach"$
 
-=== Elastisch
+*nicht-konservativ*: $E_"mech,nach" = E_"mech,vor" + W_"nicht-konservativ"$
+== Stoß
+=== Elastizität
+$ e="Rückstoßgeschw."/"Annäherungsgeschw." $
+In 1D: $=|(v'_2 - v'_1)/(v_2-v_1)| in [0,1]$
+
+=== Elastisch $e=1$
 _$arrow(p)$ und $E_"kin"$ erhalten_
 
 #image("images/elastischer_stoß.png")
-$ v'_1=v_1 (m_1 - m_2)/(m_1 + m_2)+v_2 (2m_2)/(m_1 + m_2) $
 
-$ v'_2=v_1 (2m_1)/(m_1 + m_2)+v_2 (m_2 - m_1)/(m_1 + m_2) $
-
-Man kann auch immer $v_2=0$ setzen um zu vereinfachen, wenn man Koordinatensystem anpasst.
-// stimmt das?
-
-*Ungefähr gleiche Masse*: 
-$m_1 approx m_2 => v'_1=0, v'_2=v_1$
-
-*Abprall*:
-$m_2 >> m_1$ und $v_2=0 => v'_1 = - v_1$
-
-=== Unelastisch
+=== Unelastisch $0<e<1$
 _$arrow(p)$ erhalten aber $E_"kin"$ nicht_
 
 #image("images/unelastischer_stoß.png")
-$ m_1v_1 + m_2v_2 = (m_1 + m_2)v' $
 
-*Minimal* für $m_1>>m_2$
-_Zug fährt gegen Fliege_
+=== vollständig unelastisch $e=0$
+_Körper kleben zusammen, gemeinsame Endgeschwindigkeit_ 
 
-*Maximal* für $m_1<<m_2$
-_Fliege fliegt gegen Scheibe_
 
-==== Elastizität
-$e="Rückstoßgeschw."/"Annäherungsgeschw."=|(v'_2 - v'_1)/(v_2-v_1)| in [0,1]$
+$ arrow(v)_"gemeinsam" = arrow(p)_"ges,vor" / M_"ges" $
 
+=== Beispiel: Raketengleichung
+#image("images/raketengleichung.png")
+$ Delta v = v_G ln(m_0/m(t)) $
+
+=== Beispiel: Gravitational Slingshot
+#image("images/slingshot.png")

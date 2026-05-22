@@ -18,7 +18,7 @@
     ],
 
     [Geschwindigkeit], [$harpoon(v) = (d harpoon(r))/(d t)$], [$m/s$],
-    [Beschleunigung], [$harpoon(a) = (d harpoon(v))/(d t)$], [$m/s^2$],
+    [Beschleunigung], [$harpoon(a) = (d harpoon(v))/(d t) = (d^2 arrow(r)(t))/(d t^2) $], [$m/s^2$],
     [Impuls], [$harpoon(p) = m dot harpoon(v)$], [$N dot s$],
     [Kraft], [$harpoon(F) = (d harpoon(p))/(d t)$], [$N$],
     [Kraft ($m$ konstant)], [$harpoon(F) = m dot harpoon(a)$], [$N$],
