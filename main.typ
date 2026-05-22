@@ -9,6 +9,8 @@
 #set text(size: 14pt)
 #set heading(numbering: "1.")
 #show heading.where(level: 3): set heading(numbering: none)
+#show heading.where(level: 4): set heading(numbering: none)
+#show heading.where(level: 5): set heading(numbering: none)
 #show math.equation: set text(fill: rgb("#265499"))
 #show math.equation: set text(size: 16pt)
 #set table(inset: (x, y) => if y == 0 { 4pt } else { 8pt })
@@ -16,6 +18,9 @@
 #show table: set table(
   stroke: 0.5pt,
 )
+#set par(leading: 0.65em)
+#set par(spacing: 0.8em)
+
 
 // #set table(fill: (_, y) => if y == 0 { green.lighten(80%) })  
 // #show table.cell.where(y: 0): strong
@@ -23,7 +28,9 @@
 #import "@preview/fletcher:0.5.8"
 #include "content/1-intro.typ"
 #pagebreak()
-#include "content/2-mechanik.typ"
+#include "content/2-kinematik.typ"
+#pagebreak()
+#include "content/3-dynamik.typ"
 #set page(
   paper: "a4",
   flipped: false, 

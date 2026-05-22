@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 600" width="100%" height="100%">
+    <defs>
+        <!-- Arrowheads for axes -->
+        <marker id="axis-arrow" refX="10" refY="4" markerWidth="10" markerHeight="8" orient="auto">
+            <path d="M 0,0 L 10,4 L 0,8 L 2,4 Z" fill="black"/>
+        </marker>
+        
+        <!-- Arrowheads for angle arcs -->
+        <marker id="arc-arrow" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M 0,0 L 8,4 L 0,8 L 1.5,4 Z" fill="black"/>
+        </marker>
+
+        <!-- Arrowheads for vectors (scaled for thicker lines) -->
+        <marker id="vec-arrow-red" refX="12" refY="5" markerWidth="12" markerHeight="10" orient="auto">
+            <path d="M 0,0 L 12,5 L 0,10 L 2.5,5 Z" fill="#cc0000"/>
+        </marker>
+        <marker id="vec-arrow-green" refX="12" refY="5" markerWidth="12" markerHeight="10" orient="auto">
+            <path d="M 0,0 L 12,5 L 0,10 L 2.5,5 Z" fill="#008800"/>
+        </marker>
+        <marker id="vec-arrow-orange" refX="12" refY="5" markerWidth="12" markerHeight="10" orient="auto">
+            <path d="M 0,0 L 12,5 L 0,10 L 2.5,5 Z" fill="#cc6600"/>
+        </marker>
+    </defs>
+
+    <!-- 3D Bounding Box (Dashed Guides) -->
+    <g stroke="#888888" stroke-width="0.5" stroke-dasharray="5,4">
+        <!-- Base in XY plane -->
+        <line x1="110" y1="410" x2="290" y2="410"/>
+        <line x1="380" y1="350" x2="290" y2="410"/>
+        <!-- Top face -->
+        <line x1="200" y1="170" x2="110" y2="230"/>
+        <line x1="200" y1="170" x2="380" y2="170"/>
+        <line x1="110" y1="230" x2="290" y2="230"/>
+        <line x1="380" y1="170" x2="290" y2="230"/>
+        <!-- Vertical edges -->
+        <line x1="110" y1="410" x2="110" y2="230"/>
+        <line x1="380" y1="350" x2="380" y2="170"/>
+        <line x1="290" y1="410" x2="290" y2="230"/>
+    </g>
+
+    <!-- Coordinate Axes -->
+    <g stroke="black" stroke-width="1.5">
+        <!-- X-axis shortened -->
+        <line x1="200" y1="350" x2="70" y2="436.6" marker-end="url(#axis-arrow)"/>
+        <!-- Y-axis slightly shortened -->
+        <line x1="200" y1="350" x2="430" y2="350" marker-end="url(#axis-arrow)"/>
+        <!-- Z-axis slightly shortened -->
+        <line x1="200" y1="350" x2="200" y2="100" marker-end="url(#axis-arrow)"/>
+    </g>
+
+    <!-- Trajectory Ground Track (Shortened) -->
+    <line x1="200" y1="350" x2="350" y2="450" stroke="#0055ff" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+    <!-- Parabolic Trajectory (Shortened, tucked behind y-axis arrow horizontally) -->
+    <path d="M 200,350 Q 320,180 350,450" fill="none" stroke="#0055ff" stroke-width="2.5"/>
+
+    <!-- Velocity Component Vectors -->
+    <line x1="200" y1="350" x2="110" y2="410" stroke="#008800" stroke-width="2.5" marker-end="url(#vec-arrow-green)"/>
+    <line x1="200" y1="350" x2="380" y2="350" stroke="#008800" stroke-width="2.5" marker-end="url(#vec-arrow-green)"/>
+    <line x1="200" y1="350" x2="200" y2="170" stroke="#008800" stroke-width="2.5" marker-end="url(#vec-arrow-green)"/>
+    <line x1="200" y1="350" x2="290" y2="410" stroke="#cc6600" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#vec-arrow-orange)"/>
+    
+    <!-- Initial Velocity Vector -->
+    <line x1="200" y1="350" x2="290" y2="230" stroke="#cc0000" stroke-width="3" marker-end="url(#vec-arrow-red)"/>
+
+    <!-- Angles (Arcs) -->
+    <!-- alpha: Angle between v_0xy and v_0 -->
+    <path d="M 237.4,375.0 Q 242,344 227.0,314.0" fill="none" stroke="black" stroke-width="1.2" marker-end="url(#arc-arrow)"/>
+    <!-- phi: Angle between x-axis and v_0xy -->
+    <path d="M 150.1,383.3 Q 200,415 249.9,383.3" fill="none" stroke="black" stroke-width="1.2" marker-end="url(#arc-arrow)"/>
+
+    <!-- Mathematical Labels (LaTeX Style) -->
+    <!-- Grouping labels cleanly with transforms so arrows never detach -->
+    <g font-family="Latin Modern Math, Times New Roman, serif" font-style="italic" font-size="20" fill="black">
+        
+        <!-- Axes Labels -->
+        <!-- Moved slightly to accommodate shorter x-axis -->
+        <text x="55" y="455">x</text>
+        <text x="425" y="340">y</text>
+        <text x="180" y="110">z</text>
+        
+        <!-- Important Vectors (30% bigger -> font-size 26) -->
+        <!-- Origin (r_0 vector) -->
+        <g transform="translate(145, 340)">
+            <text x="0" y="0" font-size="26">r<tspan font-style="normal" baseline-shift="sub" font-size="18">0</tspan></text>
+            <path d="M 0,-20 L 14,-20 L 11,-23 M 14,-20 L 11,-17" stroke="black" stroke-width="1.2" fill="none"/>
+        </g>
+
+        <!-- End of Trajectory (r(t) vector) -->
+        <g transform="translate(355, 465)">
+            <text x="0" y="0" font-size="26">r(t)</text>
+            <path d="M 0,-20 L 25,-20 L 22,-23 M 25,-20 L 22,-17" stroke="black" stroke-width="1.2" fill="none"/>
+        </g>
+
+        <!-- Initial Velocity (v0) -->
+        <g transform="translate(300, 225)">
+            <text x="0" y="0" font-size="26">v<tspan font-style="normal" baseline-shift="sub" font-size="18">0</tspan></text>
+            <path d="M 0,-20 L 14,-20 L 11,-23 M 14,-20 L 11,-17" stroke="black" stroke-width="1.2" fill="none"/>
+        </g>
+
+        <!-- Angle Labels (30% bigger -> font-size 26) -->
+        <text x="240" y="345" font-size="26">α</text>
+        <text x="185" y="415" font-size="26">φ</text>
+
+        <!-- Other Vectors (Original size -> font-size 20) -->
+        <!-- v0x -->
+        <g transform="translate(65, 420)">
+            <text x="10" y="-20">v<tspan font-style="normal" baseline-shift="sub" font-size="14">0</tspan><tspan baseline-shift="sub" font-size="14">x</tspan></text>
+            <path d="M 10,-35 L 24,-35 L 21,-38 M 24,-35 L 21,-32" stroke="black" stroke-width="1.2" fill="none"/>
+        </g>
+        
+        <!-- v0y -->
+        <g transform="translate(385, 375)">
+            <text x="0" y="0">v<tspan font-style="normal" baseline-shift="sub" font-size="14">0</tspan><tspan baseline-shift="sub" font-size="14">y</tspan></text>
+            <path d="M 0,-15 L 14,-15 L 11,-18 M 14,-15 L 11,-12" stroke="black" stroke-width="1.2" fill="none"/>
+        </g>
+        
+        <!-- v0z -->
+        <g transform="translate(155, 180)">
+            <text x="0" y="0">v<tspan font-style="normal" baseline-shift="sub" font-size="14">0</tspan><tspan baseline-shift="sub" font-size="14">z</tspan></text>
+            <path d="M 0,-15 L 14,-15 L 11,-18 M 14,-15 L 11,-12" stroke="black" stroke-width="1.2" fill="none"/>
+        </g>
+        
+        <!-- v0xy -->
+        <g transform="translate(280, 440)">
+            <text x="0" y="0">v<tspan font-style="normal" baseline-shift="sub" font-size="14">0</tspan><tspan baseline-shift="sub" font-size="14">xy</tspan></text>
+            <path d="M 0,-15 L 18,-15 L 15,-18 M 18,-15 L 15,-12" stroke="black" stroke-width="1.2" fill="none"/>
+        </g>
+        
+    </g>
+</svg>
+
