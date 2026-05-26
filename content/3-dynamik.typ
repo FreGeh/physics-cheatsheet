@@ -29,14 +29,99 @@ _Äquivalenzprinzip_:
 $ m_"träge" = m_"schwer" $
 
 == Impuls
+Impuls = Bewegungsgröße
 
+$ arrow(p) = m arrow(v) $
+
+Gesamtimpuls:
+$ arrow(p)_"ges" = sum_i arrow(p)_i $
+
+=== Impulserhaltung
+Wenn keine äußeren Kräfte auf ein System wirken:
+
+$ arrow(F)_"ext,ges" = 0 $
+
+dann ist der Gesamtimpuls konstant:
+
+$ arrow(p)_"ges" = sum_i arrow(p)_i = "konstant" $
+
+also:
+
+$ sum_i arrow(p)_(i,"vor") = sum_i arrow(p)_(i,"nach") $
 
 == Kraft
+Kraft = zeitliche Impulsänderung = Ursache von Beschleunigung
+
+$ arrow(F) = (d arrow(p))/(d t) $
+
+konstant:
+$arrow(F) = m arrow(a)$
+
+_Kräftegleichgewicht_
+$arrow(F)_"ges" = 0 => arrow(a) = 0$
+
+=== Gewichtskraft
+Die Gewichtskraft wirkt immer senkrecht nach unten:
+
+$ arrow(F)_G = m arrow(g) $
+
+==== Beispiel: Schiefe Ebene
+#image("images/schiefe_ebene.svg")
+
+$F_(G H)= m g sin(alpha)$ *Hangabtriebskraft*
+
+$F_N = m g cos(alpha)$ *Normalkraft*
+
+=== Federkraft
+_wirkt entgegen der Auslenkung_
+$ arrow(F)_"Feder" = - k arrow(x) $
+
+$k$ = Federkonstante $[N / m]$
+
+== Energie
+
+Energie ist die Fähigkeit eines Systems, Arbeit zu verrichten.
+
+$ [E] = J = (k g dot m^2) / s^2 $
+
+=== Kinetische Energie
+Bewegungsenergie eines Körpers.
+
+$ E_"kin" = 1/2 m v^2 $
 
 
-== Arbeit & Energie
-Nur die Komponente der Kraft in Richtung der Verschiebung verrichtet Arbeit:
+=== Potentielle Energie
+Energie aufgrund der Lage oder Auslenkung in einem konservativen Kraftfeld.
+
+==== Gravitationsenergie (_Lageenergie_)
+
+$ E_("pot,grav") = m g h $
+
+==== Federenergie (_Spannenergie_)
+$ E_("pot,Feder") = 1/2 k x^2 $
+
+$x$ = Auslenkung aus der Ruhelage  
+
+=== Mechanische Energie
+Summe aus kinetischer und potentieller Energie.
+
+$ E_"mech" = E_"kin" + E_"pot" $
+
+== Energieerhaltung
+
+In einem abgeschlossenen System bleibt die Gesamtenergie erhalten:
+
+$ E_"gesamt" = sum_i E_i = "konstant" $
+
+
+$ E_("mech,nach") = E_("mech,vor") + W_"nicht-konservativ" $
+
+== Arbeit
+Arbeit ist Energieübertragung durch eine Kraft entlang eines Weges.
+
 $ W = integral_S arrow(F) dot d arrow(s) $
+
+$ [W] = J = N dot m = (k g dot m^2) / s^2 $
 
 Für konstante Kraft mit $theta$ = Winkel zwischen Kraft und Verschiebung:
 $ W = F s cos(theta) $
@@ -44,54 +129,38 @@ $ W = F s cos(theta) $
 *Arbeit aller Kräfte zusammen* = Änderung kinetischer Energie
 $ W_"netto"=Delta E_"kin" $
 
-*Kinetische Energie* = Bewegungsenergie
-$ E_"kin" = 1/2 m v^2 $
-
 #image("images/konservativ_arbeit.png")
-=== Konservativ
-$ W_"konservativ"=-Delta E_"pot" $
-- Arbeit gegen eine konservative Kraft erhöht $E_"pot"$
-- Arbeit der konservativen Kraft verringert $E_"pot"$
-- hängt nur von Start- und Endpunkt ab
+== Konservative Kraft
+_hängt nur von Start- und Endpunkt ab_
+$ W_"kons"=-Delta E_"pot" $
+- gegen eine konservative Kraft $->$ erhöht $E_"pot"$
+- der konservativen Kraft $->$ verringert $E_"pot"$
 
-_z.B. Gravitation, elektr. Feld, Federkraft_
+== Nicht-Konservative Kraft
+_hängt vom konkreten Weg ab_
 
-=== Nicht-Konservativ
-Arbeit $W$ hängt vom Weg ab
+$ W_"nicht-kons" = Delta E_"mech" $
 
-_z.B. Reibung_
+// === Reibung _(Couloumb) _
+// _wirkt entgegen der Bewegungsrichtung_
 
+// *Haftreibung*:
+// $ F_H <= mu_H F_N $
 
-==== Hubarbeit (_work against gravity_)
-$ E_("pot,grav")=m g h $
+// *Gleitreibung*:
+// $ F_G = mu_G F_N $
 
-// $=> W_G = -m g Delta h, Delta E_"pot" = m g Delta h$ 
+// _meistens:_
+// $mu_H > mu_G$
 
-==== Spannarbeit (_spring work_)
-$ E_"pot,Feder" = 1/2 k x^2 $
-// $=> W_F = -1/2 k (x_2^2 - x_1^2), E_"pot" = 1/2 k x^2$
-
-wobei $x$ = Auslenkung aus der Ruhelage
 == Leistung
 Arbeit pro Zeiteinheit
 
 $ P=(Delta W)/(Delta t)=(d W)/(d t) $
 
-*Pferdestärke* $P S=(75 k g dot g dot 1m)/1s=0.735 k W$
-#image("images/PS.png")
+// *Pferdestärke* $P S=(75 k g dot g dot 1m)/1s=0.735 k W$
+// #image("images/PS.png")
 
-== Erhaltungssätze
-In geschlossenen Systemen gelten:
-=== Impulserhaltung
-Wenn  $arrow(F)_"ext,ges"=0$:
-$ arrow(p)_"ges,vor" = sum_i arrow(p)_i_"vor" = sum_i arrow(p)_i_"nach" = arrow(p)_"ges,nach" $
-
-=== Energieerhaltung
-$E_"gesamt" = sum_i E_i = "konstant"$
-
-*konservativ*: $E_"mech,vor" = E_"mech,nach"$
-
-*nicht-konservativ*: $E_"mech,nach" = E_"mech,vor" + W_"nicht-konservativ"$
 == Stoß
 === Elastizität
 $ e="Rückstoßgeschw."/"Annäherungsgeschw." $
@@ -115,8 +184,14 @@ $ arrow(v)_"gemeinsam" = arrow(p)_"ges,vor" / M_"ges" $
 
 === Beispiel: Raketengleichung
 #image("images/raketengleichung.png")
-$ Delta v = v_G ln(m_0/m(t)) $
-_idealisiert_ 
+// $ d/(d t) (p_R + p_G)=0 $
+
+$ v(t) = v_"start" + v_G ln(m_0/m(t)) $ 
+Bestimme dafür:
+- Treibstoffverbrauch $mu=-(d m)/(d t)$ (linear = $mu=m/t$)
+- Raketenmas
+se $m(t)$, z.B. $m(t)=m_0 - mu t$
+- Ausströmgeschwindigkeit von Gas relativ zu Rakete $v_G = F/mu$
 
 === Beispiel: Gravitational Slingshot
 #image("images/slingshot.png")
