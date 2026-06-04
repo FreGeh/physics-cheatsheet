@@ -166,9 +166,18 @@ $ P=(Delta W)/(Delta t)=(d W)/(d t) $
 $ e="Rückstoßgeschw."/"Annäherungsgeschw." $
 In 1D: $=|(v'_2 - v'_1)/(v_2-v_1)| in [0,1]$
 
-=== Elastisch $e=1$
-_$arrow(p)$ und $E_"kin"$ erhalten_
+=== Total Elastisch $e=1$
+_$E_"kin"$ und $arrow(p)$ erhalten_
 
+*_1D:_* 
+
+Energieerhaltung: 
+
+$m_1 v_1^2 + m_2 v_2^2 = m_1 v'_1^2 + m_2 v'_2^2$
+
+Impulserhaltung:
+
+$m_1 v_1 + m_2 v_2 = m_1 v'_1 + m_2 v'_2$
 #image("images/elastischer_stoß.png")
 
 === Unelastisch $0<e<1$
@@ -176,11 +185,25 @@ _$arrow(p)$ erhalten aber $E_"kin"$ nicht_
 
 #image("images/unelastischer_stoß.png")
 
-=== vollständig unelastisch $e=0$
+=== Vollständig unelastisch $e=0$
+_$arrow(p)$ erhalten aber $E_"kin"$ nicht_
+
 _Körper kleben zusammen, gemeinsame Endgeschwindigkeit_ 
 
+$ arrow(v)_"gemeinsam" = arrow(p)_"ges,vor" / M_"ges" =  (sum_i m_i arrow(v_i)) / (sum_i m_i)$
 
-$ arrow(v)_"gemeinsam" = arrow(p)_"ges,vor" / M_"ges" $
+=== Schwerpunktsbewegung
+_unbeeinflusst von Elastizität_
+
+*CM* = Center of Mass = Schwerpunkt
+
+$ arrow(v)_"CM" = 1/M sum_i m_i arrow(v)_i $
+
+*Impact Parameter* $b$ = seitliche Versatz der Stoßpartner CM's
+- $b=0$: zentraler Stoß = 1D
+- $b != 0$: schiefer Stoß = 2D
+
+#image("images/2D-stoß.png")
 
 === Beispiel: Raketengleichung
 #image("images/raketengleichung.png")
@@ -189,8 +212,7 @@ $ arrow(v)_"gemeinsam" = arrow(p)_"ges,vor" / M_"ges" $
 $ v(t) = v_"start" + v_G ln(m_0/m(t)) $ 
 Bestimme dafür:
 - Treibstoffverbrauch $mu=-(d m)/(d t)$ (linear = $mu=m/t$)
-- Raketenmas
-se $m(t)$, z.B. $m(t)=m_0 - mu t$
+- Raketenmasse $m(t)$, z.B. $m(t)=m_0 - mu t$
 - Ausströmgeschwindigkeit von Gas relativ zu Rakete $v_G = F/mu$
 
 === Beispiel: Gravitational Slingshot
