@@ -217,3 +217,18 @@ Bestimme dafür:
 
 === Beispiel: Gravitational Slingshot
 #image("images/slingshot.png")
+
+== Reibung
+
+=== Haft-
+muss überwunden werden um Körper in Bewegung zu setzen. Spielt danach keine Rolle.
+
+=== Gleit-
+wirkt gegen Bewegung, nur wenn Körper in Bewegung
+
+=== Stokes-
+Viskose Reibung in Fluiden.
+
+Approximation durch kugelförmiger Körper der sich durch Fluid bewegt:
+$ F_G = $
+
